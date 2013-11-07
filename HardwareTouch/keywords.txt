@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For HardwareTouch
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+HardwareTouch	KEYWORD1
+TouchPin	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+read	KEYWORD2
+readRaw	KEYWORD2
+calibrate	KEYWORD2
+getCalibratedValue	KEYWORD2
+getPin	KEYWORD2
+newValue	KEYWORD2
+getValue	KEYWORD2
+setThreshold	KEYWORD2
+touched	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

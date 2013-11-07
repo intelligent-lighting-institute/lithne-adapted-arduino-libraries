@@ -25,7 +25,7 @@
 */
 
 #ifndef DMX_SIZE
-	#define DMX_SIZE 64
+	#define DMX_SIZE 256
 #endif
 
 class DmxSimpleClass

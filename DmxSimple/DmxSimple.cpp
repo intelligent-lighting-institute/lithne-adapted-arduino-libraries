@@ -164,10 +164,10 @@ void dmxSendByte(volatile uint8_t value)
 	// Make pin low; DMX frame startbit
 	dmxPort->OUTCLR = bitmask; 
 	
-	// Delay 4 microseconds in Assembly; 40 clock cycles is 4 us
+	// Delay 4 microseconds in Assembly; 40 clock cycles is 4 us (41 for Lithne Boards is closer)
 	uint8_t delCount;
 	__asm__ volatile (
-			"ldi %[delCount],40\n" 
+			"ldi %[delCount],41\n" 
 			"delLoop%=:\n"
 				"dec %[delCount]\n"
 				"brne delLoop%=\n"
@@ -186,9 +186,9 @@ void dmxSendByte(volatile uint8_t value)
 		}
 		value = value >> 1; // bitshift value
 		
-		// Delay 4 microseconds in Assembly; 35 clock cycles makes up for 3,5 us, the other 0,5 are taken by the code in the for loop above
+		// Delay 4 microseconds in Assembly; 35 clock cycles makes up for 3,5 us, the other 0,5 are taken by the code in the for loop above (36 for Lithne boards is closer)
 		__asm__ volatile (
-			"ldi %[delCount],35\n" 
+			"ldi %[delCount],36\n" 
 			"delLoop%=:\n"
 				"dec %[delCount]\n"
 				"brne delLoop%=\n"
