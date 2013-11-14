@@ -14,11 +14,18 @@
 /** Default Constructor, make sure to set the channel correctly later on! **/
 TouchPin::TouchPin( )
 { 
-  
+    _pin = 0;
+    _calibratedValue = 0;;
+    _storedValue = 0;
+    _threshold = 1;
 }
 TouchPin::TouchPin( uint16_t pin, bool calibrateNow )
 { 
-  _pin = pin;
+  _pin = pin;    
+  _calibratedValue = 0;;
+  _storedValue = 0;
+  _threshold = 1;
+  
   if( calibrateNow )
   {
   	calibrate();

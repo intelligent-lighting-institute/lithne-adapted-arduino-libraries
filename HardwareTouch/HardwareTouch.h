@@ -50,10 +50,10 @@ class TouchPin
     void    setThreshold( uint8_t thresh );
     
   protected:
-    uint16_t  _pin             = 0;
-    uint8_t   _calibratedValue = 0; 
-    int8_t    _storedValue     = 0;
-    uint8_t   _threshold       = 1;
+    uint16_t  _pin;
+    uint8_t   _calibratedValue;
+    int8_t    _storedValue;
+    uint8_t   _threshold;
 
   #if defined(__AVR_XMEGA__)
     uint8_t getBitFromBitField( uint8_t input ); // Function taken from WInterrupt.c; required for XMega
